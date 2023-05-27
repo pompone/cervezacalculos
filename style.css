@@ -1,0 +1,82 @@
+.fondo{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/fondo.jpg);
+    background-size: cover;
+}
+
+#lab{
+  margin-top: -50px;
+  color: rgb(178, 203, 60);
+  font-size: 35px;
+}
+#image{
+  height: 80px;
+}
+  
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 29px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group input[type="number"] {
+      width: 100%;
+      padding: 50px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      border-top: 1px solid #cccccc;
+      padding-top: 10px;
+    }
+
+    .result label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    #densidad{
+      margin: 25px;
+    }
+    #alcoholVV{
+      margin-right: 1px;
+    }
+
+    .footer{
+      display: block;
+      margin-top: 20px;
+      background-color: rgb(178, 203, 60);
+    }

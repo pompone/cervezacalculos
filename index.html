@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculos Cerveza</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <img id="image" src="img/rn.jpg">
+     <h1 id="lab">Laboratorio Regional de Salud Ambiental Villa Regina</h1>
+
+  </nav>
+  <div class="fondo">
+    <div class="container">
+      <h1>Cálculos de Análisis de Cerveza</h1>
+      <label for="extractoSeco">Extrato Seco:</label>
+      <input type="number" step="0.01" id="extractoSeco">
+      <label for="alcoholVV">Alcohol v/v:</label>
+      <input type="number" step="0.01" id="alcoholVV">
+      <label for="densidad">Densidad:</label>
+      <input type="number" step="0.01" id="densidad">
+      <button onclick="calcular()">Calcular</button>
+
+      <div class="result">
+        <h3>Resultados:</h3>
+        <label for="alcoholPP">Alcohol p/p:</label>
+        <input type="number" step="0.01" id="alcoholPP" disabled>
+        <label for="extractoPrimitivo">Extrato Primitivo:</label>
+        <input type="number" step="0.01" id="extractoPrimitivo" disabled>
+        <label for="gradoFermentacion">Grado de Fermentación:</label>
+        <input type="number"  step="0.01" id="gradoFermentacion" disabled>
+      </div>
+    </div>
+  </div>
+  <script>
+    function calcular() {
+      var extractoSeco = parseFloat(document.getElementById("extractoSeco").value);
+      var alcoholVV = parseFloat(document.getElementById("alcoholVV").value);
+      var densidad = parseFloat(document.getElementById("densidad").value);
+
+      var alcoholPP = (alcoholVV / densidad) * 0.789;
+      var extractoPrimitivo = (((2.0665 * alcoholPP) + extractoSeco) * 100) / ((1.0665 * alcoholPP) + 100);
+      var gradoFermentacion = ((extractoPrimitivo - extractoSeco) / extractoPrimitivo) * 100;
+
+      document.getElementById("alcoholPP").value = alcoholPP.toFixed(2);
+      document.getElementById("extractoPrimitivo").value = extractoPrimitivo.toFixed(2);
+      document.getElementById("gradoFermentacion").value = gradoFermentacion.toFixed(2);
+    }
+  </script>
+  <footer>
+    <!-- footer -->
+    
+        </a>
+        <div class="footer">
+            <center>Alejandro M. Pompone. 2023</center>
+        </div>
+</body>
+</html>
